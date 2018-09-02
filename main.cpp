@@ -2,7 +2,7 @@
 #include <math.h>
 #include <ctime>
 
-int primer_finder(int number);
+int prime_finder(int number);
 
 int main()
 {
@@ -11,7 +11,7 @@ int main()
     int number_of_primes_found = 0;
     while(1)
     {
-        if(primer_finder(current_number))
+        if(primer_finde(current_number))
         {
             std::cout << current_number << " is a prime number" << std::endl;
             number_of_primes_found += 1;
@@ -28,7 +28,7 @@ int main()
     return 0;
 }
 
-int primer_finder(int number)
+int primer_finde(int number)
 {
     for(int i = 2; i <= sqrt(number); i++)
     {
