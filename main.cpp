@@ -8,7 +8,7 @@ int main()
 {
     int start_s=clock();
     int current_number = 1;
-    int number_of_primes_to_look_for = 100;
+    int const number_of_primes_to_look_for = 100;
     int number_of_primes_found = 0;
     int primes_found[number_of_primes_to_look_for];
     while(1)
@@ -38,7 +38,10 @@ int main()
 
 int prime_finder(int number)
 {
-    for(int i = 2; i <= sqrt(number); i++)
+    if(number % 2 == 0)
+        return 0;
+    
+    for(int i = 3; i <= sqrt(number); i+=2)
     {
         if(number % i == 0)
             return 0;
